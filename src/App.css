@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+.sticky-wrapper {
+  position: relative;
+  height: 3rem; /* We need to change this value */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sticky .sticky-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sticky-header{
+  height:60px;
+  width:100%;
+  background-color: #111;
+  color:white;
+  font-size: 25px;
+
+  line-height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn{
+ cursor: pointer;
+  width:auto;
+  padding:10px;
+  border: 0px;
+  border-radius: 4px;
+  margin-right:10px;
+  color:white;
+  margin-top:30px;
+  background-color: #0080ff;
+}
+.tab-panel__header{
+  margin:50px 50px;
+  
+}
+.wrapper{
+  margin:20px 20px;
+  float:left;
+}
+.tab-panel__content{
+  margin-left:50px;
+  max-height: 400px;
+  overflow-y: scroll;
+  margin-right:50px;
+}
+.tab--selected{
+  background-color: black;
+  padding:10px;
+  color:white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right:20px;
+}
+.tab{
+  cursor: pointer;
+  margin-right: 20px;
+  
+}
+
+.form-control{
+  height:35px;
+  width:240px;
+  border-radius: 4px;
+  padding-left:10px;
+  border:1px solid #ccaacc;
+
+}
+
+
+:root {
+  --col-primary-active: #08f;
+  --col-primary-text: #4c4c4c;
+  --col-separator: #cccccc;
+}
+
+.drop-down__list-item {
+  padding-left: 5px;
+  height: 30px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.drop-down__list-item > input {
+  margin: 0.3rem;
+}
+
+.new-drop-down__button {
+    color: inherit;
+    position: relative;
+    border: 1px solid var(--col-separator);
+    border-radius: 3px;
+    width: var(--width-list);
+    font-size: 12px;
+    height: 30px;
+    text-align: left;
+    padding-left: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.drop-down-icon {
+  position: absolute;
+  width: 30px;
+  height: 29px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  top: 0;
+  right: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.new-drop-down {
+  --font-size: 12px;
+  --width-list: 135px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-drop-down {
+  font-size: var(--font-size);
+  width: var(--width-list);
+  position: relative;
+  z-index: 1;
+}
+
+button.new-drop-down__button.new-drop-down--is-open {
+    color: var(--col-primary-active);
+}
+
+button.new-drop-down__button.new-drop-down--is-open span {
+    color: var(--col-primary-text);
+}
+
+.new-drop-down__list-wrapper {
+  border: 1px solid var(--col-separator);
+  max-width: var(--width-list);
+  width: 100%;
+  background: white;
+  position: absolute;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
